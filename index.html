@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Klatch Label QA</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="hero">
+    <section class="panel intro">
+      <p class="eyebrow">Klatch data-labeling workflow</p>
+      <h1>Annotation batch QA</h1>
+      <p class="lede">Audit image-label records for missing fields, duplicate assets, low-confidence labels and class imbalance before a batch reaches model training or client delivery.</p>
+      <div class="badges"><span>Taxonomy checks</span><span>Review routing</span><span>Class balance</span></div>
+    </section>
+    <section class="panel workspace">
+      <label for="annotationInput">Annotation batch</label>
+      <textarea id="annotationInput" spellcheck="false" placeholder='image_id,label,confidence\nimg-001,crop,0.94\nimg-002,weed,0.62'></textarea>
+      <div class="actions"><button id="auditButton" type="button">Audit batch</button></div>
+      <section id="results" class="results" aria-live="polite"><p class="empty-state">Paste annotation JSON or CSV to audit a batch.</p></section>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
